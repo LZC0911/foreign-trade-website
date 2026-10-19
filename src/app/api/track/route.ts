@@ -1,6 +1,7 @@
-import { NextResponse } from 'next/server';
-import db from '@/lib/db';
+﻿import { NextResponse } from 'next/server';
+import { insertVisit } from '@/lib/db';
 import { getClientIp, getGeoLocation } from '@/lib/geo';
+
 
 export async function POST(request: Request) {
   try {
@@ -10,16 +11,11 @@ export async function POST(request: Request) {
     const ip = getClientIp(request);
     const geo = await getGeoLocation(ip);
 
-    db.prepare(
-      'INSERT INTO visits (ip, country, city, user_agent, page, referer) VALUES (?, ?, ?, ?, ?, ?)'
-    ).run(
-      ip,
-      geo.country,
-      geo.city,
-      request.headers.get('user-agent') || '',
-      page || '/',
-      referer || ''
-    );
+    await insertVisit({
+      ip, country: geo.country, city: geo.city,
+      user_agent: request.headers.get('user-agent') || '',
+      page: page || '/', referer: referer || '',
+    });
 
     return NextResponse.json({ success: true, country: geo.country, city: geo.city });
   } catch (error) {
@@ -36,16 +32,11 @@ export async function GET(request: Request) {
     const ip = getClientIp(request);
     const geo = await getGeoLocation(ip);
 
-    db.prepare(
-      'INSERT INTO visits (ip, country, city, user_agent, page, referer) VALUES (?, ?, ?, ?, ?, ?)'
-    ).run(
-      ip,
-      geo.country,
-      geo.city,
-      request.headers.get('user-agent') || '',
-      page,
-      request.headers.get('referer') || ''
-    );
+    await insertVisit({
+      ip, country: geo.country, city: geo.city,
+      user_agent: request.headers.get('user-agent') || '',
+      page, referer: request.headers.get('referer') || '',
+    });
 
     return NextResponse.json({ success: true, country: geo.country, city: geo.city });
   } catch (error) {

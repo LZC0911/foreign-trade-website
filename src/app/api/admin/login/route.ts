@@ -10,7 +10,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: 'Username and password required' }, { status: 400 });
     }
 
-    const result = authenticate(username, password);
+    const result = await authenticate(username, password);
     
     if (!result.success) {
       return NextResponse.json(result, { status: 401 });

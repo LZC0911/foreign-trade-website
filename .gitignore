@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -30,20 +28,25 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
 
-# local data
-/data/
-*.db
-*.db-journal
-
-# AGENTS.md (Next.js auto-generated)
-AGENTS.md
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local data (SQLite)
+/data/
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Next.js auto-generated
+AGENTS.md
