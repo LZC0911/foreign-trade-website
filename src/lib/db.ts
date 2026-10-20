@@ -49,9 +49,17 @@ function nowStr(): string {
 
 let backend: Backend | null = null;
 
+// Accept the Upstash Marketplace integration, Vercel KV, and direct Redis variable names.
+function hasRedisEnv(): boolean {
+  return !!(
+    (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) ||
+    (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN)
+  );
+}
+
 function getBackend(): Backend {
   if (backend) return backend;
-  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+  if (hasRedisEnv()) {
     backend = 'redis';
   } else {
     try {
@@ -71,10 +79,8 @@ let redis: any = null;
 async function getRedis() {
   if (!redis) {
     const { Redis } = await import('@upstash/redis');
-    redis = new Redis({
-      url: process.env.UPSTASH_REDIS_REST_URL!,
-      token: process.env.UPSTASH_REDIS_REST_TOKEN!,
-    });
+    // fromEnv() resolves UPSTASH_REDIS_REST_URL/TOKEN and KV_REST_API_URL/TOKEN automatically.
+    redis = Redis.fromEnv();
   }
   return redis;
 }
