@@ -40,7 +40,7 @@ export default function Navbar() {
             </div>
             <div className="hidden sm:block">
               <div className="text-white font-medium tracking-wider text-sm">APEX</div>
-              <div className="text-gray-500 text-[8px] tracking-[3px] uppercase font-mono">Global Trade</div>
+              <div className="text-gray-500 text-[10px] tracking-[3px] uppercase font-mono">Global Trade</div>
             </div>
           </Link>
 
@@ -50,14 +50,14 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-400 hover:text-white text-xs font-medium tracking-[2px] uppercase transition-colors duration-300 font-mono"
+                className="text-gray-400 hover:text-white text-sm font-medium tracking-[2px] uppercase transition-colors duration-300 font-mono"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="border border-white/30 text-white px-5 py-2 text-[10px] font-medium tracking-[2px] uppercase hover:bg-white hover:text-black transition-all duration-300 font-mono"
+              className="border border-white/30 text-white px-5 py-2 text-xs font-medium tracking-[2px] uppercase hover:bg-white hover:text-black transition-all duration-300 font-mono"
             >
               Get Started
             </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-400 hover:text-white text-xs font-medium tracking-[2px] uppercase transition-colors duration-300 font-mono"
+                  className="text-gray-400 hover:text-white text-sm font-medium tracking-[2px] uppercase transition-colors duration-300 font-mono"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -88,7 +88,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/contact"
-                className="border border-white/30 text-white px-5 py-3 text-[10px] font-medium tracking-[2px] uppercase text-center mt-2 hover:bg-white hover:text-black transition-all duration-300 font-mono"
+                className="border border-white/30 text-white px-5 py-3 text-xs font-medium tracking-[2px] uppercase text-center mt-2 hover:bg-white hover:text-black transition-all duration-300 font-mono"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Started

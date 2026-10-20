@@ -10,7 +10,7 @@ export default function AboutPage() {
         
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-[#ffffff] text-xs font-semibold tracking-[4px] uppercase">About Us</span>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#ffffff] mt-6 mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#ffffff] mt-6 mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
             A Legacy of<br />
             <span className="text-gray-500">Global Excellence</span>
           </h1>
@@ -57,7 +57,7 @@ export default function AboutPage() {
               ].map((milestone, i) => (
                 <div key={i} className="card p-6">
                   <div className="text-2xl font-bold text-white mb-2">{milestone.year}</div>
-                  <div className="text-[#888888] text-sm">{milestone.event}</div>
+                  <div className="text-[#888888] text-base">{milestone.event}</div>
                 </div>
               ))}
             </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
             {['ISO 9001', 'ISO 14001', 'SEDEX', 'BSCI', 'WRAP', 'OEKO-TEX', 'FSC', 'RoHS'].map((cert) => (
               <div key={cert} className="card p-6 flex flex-col items-center justify-center">
                 <CheckCircle2 className="text-[#ffffff] mb-3" size={24} />
-                <span className="text-[#ffffff] font-semibold text-sm tracking-wider">{cert}</span>
+                <span className="text-[#ffffff] font-semibold text-base tracking-wider">{cert}</span>
               </div>
             ))}
           </div>

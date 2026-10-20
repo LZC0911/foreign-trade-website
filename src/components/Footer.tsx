@@ -13,7 +13,7 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-white font-medium tracking-wider text-sm">APEX</div>
-                <div className="text-gray-500 text-[8px] tracking-[3px] uppercase font-mono">Global Trade</div>
+                <div className="text-gray-500 text-[10px] tracking-[3px] uppercase font-mono">Global Trade</div>
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-6 font-light">
@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-mono text-[10px] tracking-[3px] uppercase text-gray-500 mb-6">Navigation</h4>
+            <h4 className="font-mono text-sm tracking-[3px] uppercase text-gray-500 mb-6">Navigation</h4>
             <ul className="space-y-3">
               {['Home', 'About Us', 'Products', 'Contact'].map((link) => (
                 <li key={link}>
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-mono text-[10px] tracking-[3px] uppercase text-gray-500 mb-6">Products</h4>
+            <h4 className="font-mono text-sm tracking-[3px] uppercase text-gray-500 mb-6">Products</h4>
             <ul className="space-y-3">
               {['Electronics', 'Industrial Equipment', 'Consumer Goods', 'Raw Materials'].map((item) => (
                 <li key={item}>
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-mono text-[10px] tracking-[3px] uppercase text-gray-500 mb-6">Contact</h4>
+            <h4 className="font-mono text-sm tracking-[3px] uppercase text-gray-500 mb-6">Contact</h4>
             <ul className="space-y-4 text-sm">
               <li className="text-gray-400">
                 <span className="text-gray-500">Address:</span><br />
@@ -75,13 +75,13 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-xs font-mono">
+          <p className="text-gray-500 text-sm font-mono">
             © 2026 Apex Global Trade
           </p>
           <div className="flex gap-8">
-            <Link href="#" className="text-gray-500 hover:text-white text-xs transition-colors duration-300 font-mono">Privacy</Link>
-            <Link href="#" className="text-gray-500 hover:text-white text-xs transition-colors duration-300 font-mono">Terms</Link>
-            <Link href="/admin" className="text-gray-500 hover:text-white text-xs transition-colors duration-300 font-mono">Admin</Link>
+            <Link href="#" className="text-gray-500 hover:text-white text-sm transition-colors duration-300 font-mono">Privacy</Link>
+            <Link href="#" className="text-gray-500 hover:text-white text-sm transition-colors duration-300 font-mono">Terms</Link>
+            <Link href="/admin" className="text-gray-500 hover:text-white text-sm transition-colors duration-300 font-mono">Admin</Link>
           </div>
         </div>
       </div>

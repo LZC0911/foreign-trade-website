@@ -56,7 +56,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 grid-bg opacity-50" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-[#ffffff] text-xs font-semibold tracking-[4px] uppercase">Get in Touch</span>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#ffffff] mt-6 mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#ffffff] mt-6 mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
             Let's Start a<br />
             <span className="text-gray-500">Conversation</span>
           </h1>
@@ -74,7 +74,7 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="lg:col-span-2 space-y-6">
               <div className="card p-8">
-                <h3 className="text-[#ffffff] text-xs font-semibold tracking-[3px] uppercase mb-6">Contact Information</h3>
+                <h3 className="text-[#ffffff] text-sm font-semibold tracking-[3px] uppercase mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 bg-[#ffffff]/10 border border-[#ffffff]/30 flex items-center justify-center flex-shrink-0">
@@ -82,7 +82,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[#ffffff] font-medium mb-1">Head Office</div>
-                      <div className="text-[#888888] text-sm leading-relaxed">
+                      <div className="text-[#888888] text-base leading-relaxed">
                         Suite 2500, Global Trade Center<br />
                         888 Nanjing West Road<br />
                         Shanghai, China 200000
@@ -96,7 +96,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[#ffffff] font-medium mb-1">Email</div>
-                      <div className="text-[#888888] text-sm">
+                      <div className="text-[#888888] text-base">
                         info@apexglobaltrade.com<br />
                         sales@apexglobaltrade.com
                       </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[#ffffff] font-medium mb-1">Phone</div>
-                      <div className="text-[#888888] text-sm">
+                      <div className="text-[#888888] text-base">
                         +86 21 8888 8888 (Main)<br />
                         +86 21 8888 8889 (Sales)
                       </div>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[#ffffff] font-medium mb-1">Business Hours</div>
-                      <div className="text-[#888888] text-sm">
+                      <div className="text-[#888888] text-base">
                         Mon - Fri: 9:00 AM - 6:00 PM (GMT+8)<br />
                         Saturday: 10:00 AM - 4:00 PM
                       </div>
@@ -137,7 +137,7 @@ export default function ContactPage() {
                   <CheckCircle size={20} />
                   <span className="tracking-wider text-sm uppercase">24-Hour Response</span>
                 </div>
-                <p className="text-[#888888] text-sm">
+                <p className="text-[#888888] text-base">
                   We guarantee a response to all inquiries within 24 business hours.
                 </p>
               </div>
@@ -147,7 +147,7 @@ export default function ContactPage() {
             <div className="lg:col-span-3">
               <div className="card p-8 md:p-10">
                 <h3 className="text-[#ffffff] text-2xl font-semibold mb-2">Send Us a Message</h3>
-                <p className="text-[#888888] text-sm mb-8">Fill out the form below and we'll get back to you shortly.</p>
+                <p className="text-[#888888] text-base mb-8">Fill out the form below and we'll get back to you shortly.</p>
 
                 {status === 'success' ? (
                   <div className="text-center py-12">

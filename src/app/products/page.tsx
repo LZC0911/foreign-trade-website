@@ -53,7 +53,7 @@ export default function ProductsPage() {
         <div className="absolute inset-0 grid-bg opacity-50" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-[#ffffff] text-xs font-semibold tracking-[4px] uppercase">Our Products</span>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#ffffff] mt-6 mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#ffffff] mt-6 mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
             Premium Products<br />
             <span className="text-gray-500">From Around the World</span>
           </h1>
@@ -103,12 +103,12 @@ export default function ProductsPage() {
               <p className="text-[#888888] leading-relaxed mb-8">
                 {categories[activeCategory].desc}
               </p>
-              <h3 className="text-[#ffffff] text-sm font-semibold tracking-[3px] uppercase mb-4">Product Range</h3>
+              <h3 className="text-[#ffffff] text-base font-semibold tracking-[3px] uppercase mb-4">Product Range</h3>
               <div className="grid grid-cols-2 gap-3 mb-10">
                 {categories[activeCategory].items.map((item) => (
                   <div key={item} className="flex items-center gap-3 text-[#ffffff]/80">
                     <span className="w-1.5 h-1.5 bg-[#ffffff] rounded-full" />
-                    <span className="text-sm">{item}</span>
+                    <span className="text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -129,7 +129,7 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-[#ffffff] text-xs font-semibold tracking-[4px] uppercase">Full Catalog</span>
-            <h2 className="text-4xl font-bold text-[#ffffff] mt-4" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#ffffff] mt-4" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
               Explore All Categories
             </h2>
           </div>
@@ -154,8 +154,8 @@ export default function ProductsPage() {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-lg font-semibold text-[#ffffff] mb-2">{cat.name}</h3>
-                  <p className="text-[#888888] text-sm line-clamp-2 mb-3">{cat.desc}</p>
+                  <h3 className="text-xl font-semibold text-[#ffffff] mb-2">{cat.name}</h3>
+                  <p className="text-[#888888] text-base mb-3">{cat.desc}</p>
                   <span className="text-[#ffffff] text-xs tracking-wider uppercase inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                     View Details <ArrowRight size={12} />
                   </span>
