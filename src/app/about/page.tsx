@@ -4,10 +4,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col items-center w-full">
       {/* Hero */}
-      <section className="relative w-full pt-40 pb-24 overflow-hidden bg-[#0F1419]">
-        <div className="absolute inset-0 grid-bg opacity-50" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[rgba(201,178,124,0.08)] rounded-full blur-3xl" />
-        
+      <section className="relative w-full pt-40 pb-24 overflow-hidden dot-map-bg">
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-[#E8EDF5] text-xs font-semibold tracking-[4px] uppercase">About Us</span>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#E8EDF5] mt-6 mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>

@@ -76,12 +76,51 @@ body {
   opacity: 0.4;
 }
 
-/* Grid background */
+/* Dot grid background - base */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(201, 178, 124, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 178, 124, 0.025) 1px, transparent 1px);
-  background-size: 60px 60px;
+    radial-gradient(circle, rgba(201, 178, 124, 0.18) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0;
+}
+
+/* Dense dot grid - subtle, for regular sections */
+.grid-bg-light {
+  background-image:
+    radial-gradient(circle, rgba(201, 178, 124, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0;
+}
+
+/* Hero dot map - dots + world map silhouette overlay */
+.dot-map-bg {
+  background-color: #0F1419;
+  background-image:
+    radial-gradient(circle, rgba(201, 178, 124, 0.22) 1px, transparent 1px),
+    radial-gradient(circle, rgba(201, 178, 124, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px, 96px 96px;
+  background-position: 0 0, 16px 16px;
+  position: relative;
+}
+
+/* World map SVG overlay - subtle platinum outline */
+.dot-map-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 500' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke='rgba(201,178,124,0.12)' stroke-width='1'%3E%3Cpath d='M150 180 Q170 160 200 165 L230 170 Q250 175 255 195 L260 220 Q255 240 240 250 L220 255 Q190 260 170 245 Q155 230 150 210 Z'/%3E%3Cpath d='M420 130 Q460 120 500 130 L530 140 Q560 160 555 190 L545 210 Q520 230 490 235 L460 230 Q430 215 420 190 Q415 160 420 130 Z'/%3E%3Cpath d='M600 140 Q650 120 700 135 L740 155 Q760 180 755 210 L740 235 Q715 255 680 250 L640 240 Q610 220 600 195 Q595 165 600 140 Z'/%3E%3Cpath d='M180 300 Q210 280 240 285 L270 295 Q290 310 285 335 L270 360 Q245 375 215 370 L190 355 Q175 335 180 315 Z'/%3E%3Cpath d='M500 320 Q540 300 580 305 L610 320 Q625 340 620 365 L605 385 Q580 400 550 395 L520 385 Q500 365 500 345 Q498 330 500 320 Z'/%3E%3Cpath d='M780 280 Q810 270 830 285 L840 305 Q835 330 820 345 L800 350 Q780 345 775 325 Q772 300 780 280 Z'/%3E%3Cpath d='M820 200 Q835 195 845 205 L850 225 Q845 240 830 245 L815 240 Q810 220 820 200 Z'/%3E%3Cpath d='M350 380 Q370 370 385 375 L395 395 Q390 410 375 415 L360 410 Q352 395 350 380 Z'/%3E%3Cpath d='M270 400 Q280 395 285 405 L288 420 Q283 432 272 435 L262 430 Q258 415 270 400 Z'/%3E%3Cpath d='M650 400 Q670 395 690 410 L700 430 Q695 448 675 450 L655 440 Q645 425 650 400 Z'/%3E%3Cpath d='M870 350 Q885 345 890 360 L888 380 Q880 395 868 390 L860 375 Q862 355 870 350 Z'/%3E%3Cpath d='M300 180 Q320 175 335 185 L345 205 Q342 225 325 230 L308 225 Q298 205 300 180 Z'/%3E%3Cpath d='M750 190 Q765 185 775 200 L780 220 Q773 235 758 238 L745 228 Q742 210 750 190 Z'/%3E%3Cpath d='M550 260 Q570 255 585 270 L592 290 Q585 305 568 308 L552 298 Q548 278 550 260 Z'/%3E%3Cpath d='M220 130 Q235 125 245 140 L248 158 Q242 172 228 175 L215 168 Q212 150 220 130 Z'/%3E%3C/g%3E%3C/svg%3E") no-repeat center center / contain;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Connection lines between continents - animated pulse */
+.dot-map-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 500' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke='rgba(201,178,124,0.08)' stroke-width='0.75' stroke-dasharray='4 4'%3E%3Cpath d='M200 200 Q350 150 500 200 Q650 250 780 200'/%3E%3Cpath d='M200 200 Q350 300 500 350 Q650 370 780 350'/%3E%3Cpath d='M200 200 Q250 270 350 320 Q400 340 420 380'/%3E%3Cpath d='M500 200 Q550 260 650 300 Q700 320 720 360'/%3E%3Cpath d='M420 160 Q460 180 500 200 Q540 220 580 240'/%3E%3Cpath d='M600 170 Q650 185 700 200'/%3E%3Cpath d='M300 220 Q350 240 400 260 Q450 280 500 300'/%3E%3Cpath d='M170 310 Q250 330 350 340'/%3E%3Cpath d='M650 320 Q720 330 780 330'/%3E%3C/g%3E%3Ccircle cx='500' cy='200' r='2' fill='rgba(201,178,124,0.5)'/%3E%3Ccircle cx='200' cy='200' r='2' fill='rgba(201,178,124,0.4)'/%3E%3Ccircle cx='780' cy='200' r='2' fill='rgba(201,178,124,0.4)'/%3E%3Ccircle cx='420' cy='380' r='1.5' fill='rgba(201,178,124,0.3)'/%3E%3Ccircle cx='550' cy='340' r='1.5' fill='rgba(201,178,124,0.3)'/%3E%3Ccircle cx='670' cy='420' r='1.5' fill='rgba(201,178,124,0.3)'/%3E%3C/svg%3E") no-repeat center center / contain;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Buttons */

@@ -13,8 +13,8 @@ export default function HomePage() {
   return (
     <div className="flex flex-col items-center w-full">
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex flex-col items-center justify-center grid-bg bg-[#0F1419]">
-        <div className="w-full max-w-5xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">
+      <section className="relative w-full min-h-screen flex flex-col items-center justify-center dot-map-bg">
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">
           {/* Pre-title */}
           <div className="fade-in-up mb-10" style={{ animationDelay: '0.1s' }}>
             <span className="inline-block font-mono text-xs tracking-[3px] uppercase text-[#8B95A7] border border-[rgba(201,178,124,0.3)] px-5 py-2.5">
