@@ -67,9 +67,9 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="w-full py-32 bg-[#0F1419]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-          <div className="flex flex-col items-center text-center mb-20">
+      <section className="w-full py-32 bg-[#0F1419] flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col items-center">
+          <div className="flex flex-col items-center text-center mb-20 w-full">
             <span className="font-mono text-xs tracking-[3px] uppercase text-[#8B95A7] mb-4">Capabilities</span>
             <div className="section-divider" />
             <h2 className="text-4xl md:text-5xl font-bold text-[#E8EDF5] mt-6 tracking-tight leading-tight" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
@@ -99,8 +99,8 @@ export default function HomePage() {
       </section>
 
       {/* Products Preview */}
-      <section className="w-full py-32 bg-[#0F1419] border-t border-[rgba(201,178,124,0.08)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <section className="w-full py-32 bg-[#0F1419] border-t border-[rgba(201,178,124,0.08)] flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col items-center">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
               <span className="font-mono text-xs tracking-[3px] uppercase text-[#8B95A7]">Portfolio</span>
@@ -137,7 +137,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-32 bg-[#0F1419] border-t border-[rgba(201,178,124,0.08)]">
+      <section className="w-full py-32 bg-[#0F1419] border-t border-[rgba(201,178,124,0.08)] flex flex-col items-center">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">
           <span className="font-mono text-xs tracking-[3px] uppercase text-[#8B95A7]">Initiate Contact</span>
           <h2 className="text-4xl md:text-5xl font-bold text-[#E8EDF5] mt-6 mb-8 tracking-tight leading-tight" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
