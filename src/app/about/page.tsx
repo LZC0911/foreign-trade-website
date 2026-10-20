@@ -6,15 +6,15 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative pt-40 pb-24 overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-50" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#c9a64a]/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3ec5a0]/5 rounded-full blur-3xl" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-[#c9a64a] text-xs font-semibold tracking-[4px] uppercase">About Us</span>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#e8edf5] mt-6 mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <span className="text-[#3ec5a0] text-xs font-semibold tracking-[4px] uppercase">About Us</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-[#c9d1d9] mt-6 mb-8" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             A Legacy of<br />
             <span className="shimmer">Global Excellence</span>
           </h1>
-          <p className="text-[#8b95a7] text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[#8b949e] text-lg max-w-3xl mx-auto leading-relaxed">
             For over 15 years, Apex Global Trade has been at the forefront of international commerce, 
             bridging manufacturers and markets with unwavering integrity and unparalleled expertise.
           </p>
@@ -22,15 +22,15 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-24 bg-[#0d1320]">
+      <section className="py-24 bg-[#161b22]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-[#c9a64a] text-xs font-semibold tracking-[4px] uppercase">Our Story</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#e8edf5] mt-4 mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <span className="text-[#3ec5a0] text-xs font-semibold tracking-[4px] uppercase">Our Story</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#c9d1d9] mt-4 mb-8" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 From Humble Beginnings<br />to Global Leadership
               </h2>
-              <div className="space-y-5 text-[#8b95a7] leading-relaxed">
+              <div className="space-y-5 text-[#8b949e] leading-relaxed">
                 <p>
                   Founded in 2008 in Shanghai, Apex Global Trade began with a simple vision — to make international trade 
                   accessible, transparent, and reliable for businesses of all sizes.
@@ -57,7 +57,7 @@ export default function AboutPage() {
               ].map((milestone, i) => (
                 <div key={i} className="card p-6">
                   <div className="text-2xl font-bold text-gold-gradient mb-2">{milestone.year}</div>
-                  <div className="text-[#8b95a7] text-sm">{milestone.event}</div>
+                  <div className="text-[#8b949e] text-sm">{milestone.event}</div>
                 </div>
               ))}
             </div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Vision Values */}
-      <section className="py-24 bg-[#0a0f1a]">
+      <section className="py-24 bg-[#0d1117]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -87,11 +87,11 @@ export default function AboutPage() {
               },
             ].map((item, i) => (
               <div key={i} className="card p-10 text-center">
-                <div className="w-16 h-16 mx-auto bg-[#c9a64a]/10 border border-[#c9a64a]/30 rounded-full flex items-center justify-center mb-6">
-                  <item.icon className="text-[#c9a64a]" size={28} strokeWidth={1.5} />
+                <div className="w-16 h-16 mx-auto bg-[#3ec5a0]/10 border border-[#3ec5a0]/30 rounded-full flex items-center justify-center mb-6">
+                  <item.icon className="text-[#3ec5a0]" size={28} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold text-[#e8edf5] mb-4">{item.title}</h3>
-                <p className="text-[#8b95a7] leading-relaxed">{item.desc}</p>
+                <h3 className="text-xl font-semibold text-[#c9d1d9] mb-4">{item.title}</h3>
+                <p className="text-[#8b949e] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -99,17 +99,17 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section className="py-24 bg-[#0d1320]">
+      <section className="py-24 bg-[#161b22]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-[#c9a64a] text-xs font-semibold tracking-[4px] uppercase">Certifications</span>
-          <h2 className="text-4xl font-bold text-[#e8edf5] mt-4 mb-16" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <span className="text-[#3ec5a0] text-xs font-semibold tracking-[4px] uppercase">Certifications</span>
+          <h2 className="text-4xl font-bold text-[#c9d1d9] mt-4 mb-16" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             Industry Recognized & Certified
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {['ISO 9001', 'ISO 14001', 'SEDEX', 'BSCI', 'WRAP', 'OEKO-TEX', 'FSC', 'RoHS'].map((cert) => (
               <div key={cert} className="card p-6 flex flex-col items-center justify-center">
-                <CheckCircle2 className="text-[#c9a64a] mb-3" size={24} />
-                <span className="text-[#e8edf5] font-semibold text-sm tracking-wider">{cert}</span>
+                <CheckCircle2 className="text-[#3ec5a0] mb-3" size={24} />
+                <span className="text-[#c9d1d9] font-semibold text-sm tracking-wider">{cert}</span>
               </div>
             ))}
           </div>

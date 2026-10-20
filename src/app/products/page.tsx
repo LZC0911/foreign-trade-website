@@ -52,19 +52,19 @@ export default function ProductsPage() {
       <section className="relative pt-40 pb-20 overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-50" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-[#c9a64a] text-xs font-semibold tracking-[4px] uppercase">Our Products</span>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#e8edf5] mt-6 mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <span className="text-[#3ec5a0] text-xs font-semibold tracking-[4px] uppercase">Our Products</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-[#c9d1d9] mt-6 mb-8" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             Premium Products<br />
             <span className="shimmer">From Around the World</span>
           </h1>
-          <p className="text-[#8b95a7] text-lg max-w-3xl mx-auto">
+          <p className="text-[#8b949e] text-lg max-w-3xl mx-auto">
             Explore our comprehensive product portfolio across multiple industries, all backed by our quality guarantee.
           </p>
         </div>
       </section>
 
       {/* Categories Navigation */}
-      <section className="py-8 bg-[#0d1320] border-y border-[#c9a64a]/10 sticky top-16 z-40">
+      <section className="py-8 bg-[#161b22] border-y border-[#3ec5a0]/10 sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
             {categories.map((cat, i) => (
@@ -73,8 +73,8 @@ export default function ProductsPage() {
                 onClick={() => setActiveCategory(i)}
                 className={`whitespace-nowrap px-5 py-2.5 text-sm font-medium tracking-wider uppercase transition-all duration-300 ${
                   activeCategory === i
-                    ? 'bg-[#c9a64a] text-[#0a0f1a]'
-                    : 'text-[#8b95a7] hover:text-[#c9a64a] border border-[#c9a64a]/20 hover:border-[#c9a64a]/50'
+                    ? 'bg-[#3ec5a0] text-[#0d1117]'
+                    : 'text-[#8b949e] hover:text-[#3ec5a0] border border-[#3ec5a0]/20 hover:border-[#3ec5a0]/50'
                 }`}
               >
                 {cat.name}
@@ -85,7 +85,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Active Category Detail */}
-      <section className="py-20 bg-[#0a0f1a]">
+      <section className="py-20 bg-[#0d1117]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="card overflow-hidden">
@@ -97,17 +97,17 @@ export default function ProductsPage() {
               />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#e8edf5] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#c9d1d9] mb-6" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 {categories[activeCategory].name}
               </h2>
-              <p className="text-[#8b95a7] leading-relaxed mb-8">
+              <p className="text-[#8b949e] leading-relaxed mb-8">
                 {categories[activeCategory].desc}
               </p>
-              <h3 className="text-[#c9a64a] text-sm font-semibold tracking-[3px] uppercase mb-4">Product Range</h3>
+              <h3 className="text-[#3ec5a0] text-sm font-semibold tracking-[3px] uppercase mb-4">Product Range</h3>
               <div className="grid grid-cols-2 gap-3 mb-10">
                 {categories[activeCategory].items.map((item) => (
-                  <div key={item} className="flex items-center gap-3 text-[#e8edf5]/80">
-                    <span className="w-1.5 h-1.5 bg-[#c9a64a] rounded-full" />
+                  <div key={item} className="flex items-center gap-3 text-[#c9d1d9]/80">
+                    <span className="w-1.5 h-1.5 bg-[#3ec5a0] rounded-full" />
                     <span className="text-sm">{item}</span>
                   </div>
                 ))}
@@ -125,11 +125,11 @@ export default function ProductsPage() {
       </section>
 
       {/* All Categories Grid */}
-      <section className="py-24 bg-[#0d1320]">
+      <section className="py-24 bg-[#161b22]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#c9a64a] text-xs font-semibold tracking-[4px] uppercase">Full Catalog</span>
-            <h2 className="text-4xl font-bold text-[#e8edf5] mt-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <span className="text-[#3ec5a0] text-xs font-semibold tracking-[4px] uppercase">Full Catalog</span>
+            <h2 className="text-4xl font-bold text-[#c9d1d9] mt-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
               Explore All Categories
             </h2>
           </div>
@@ -152,11 +152,11 @@ export default function ProductsPage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-[#0a0f1a]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-lg font-semibold text-[#e8edf5] mb-2">{cat.name}</h3>
-                  <p className="text-[#8b95a7] text-sm line-clamp-2 mb-3">{cat.desc}</p>
-                  <span className="text-[#c9a64a] text-xs tracking-wider uppercase inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <h3 className="text-lg font-semibold text-[#c9d1d9] mb-2">{cat.name}</h3>
+                  <p className="text-[#8b949e] text-sm line-clamp-2 mb-3">{cat.desc}</p>
+                  <span className="text-[#3ec5a0] text-xs tracking-wider uppercase inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                     View Details <ArrowRight size={12} />
                   </span>
                 </div>
