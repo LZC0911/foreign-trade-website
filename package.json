@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.12",
     "@upstash/redis": "^1.39.0",
     "bcryptjs": "^3.0.3",
     "better-sqlite3": "^13.0.3",
@@ -17,9 +18,11 @@
     "jsonwebtoken": "^9.0.3",
     "lucide-react": "^1.59.0",
     "next": "16.4.2",
+    "rclone.js": "^0.6.6",
     "react": "19.3.0",
     "react-chartjs-2": "^5.3.1",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "wrangler": "^4.148.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
